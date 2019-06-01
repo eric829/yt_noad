@@ -2,9 +2,8 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-import urllib
 from flask import Flask, request, render_template
-import html5lib
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST']) 
@@ -24,7 +23,8 @@ def url():
 #    try:
     if request.method == 'POST':   
         if "list" in request.values['res']: 
-            url = request.values['res']
+            n= request.values['res'].find("&list")            
+            url = "https://youtu.be/"+ request.values['res'][n-11:n+19]
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html5lib')
             #找出a,包含href
@@ -45,10 +45,12 @@ def url():
                 url = "https://www.youtube.com/embed/VIDEO_ID?playlist=" + playlist3
             return render_template('video.html',res=url)   
         elif "watch?" in request.values['res']: 
-            url = "https://www.youtube.com/embed/" + request.values['res'][-11:]
+            n= request.values['res'].find("watch?v")
+            url = "https://www.youtube.com/embed/" + request.values['res'][n+8:n+19]
             return render_template('video.html',res=url)
         elif "https://youtu.be/" in request.values['res']:
-            url = "https://www.youtube.com/embed/" + request.values['res'][-11:]
+            n= request.values['res'].find(".be/")
+            url = "https://www.youtube.com/embed/" + request.values['res'][n+4:n+15]
             return render_template('video.html',res=url)
         elif "embed" in request.values['res']: 
             url = request.values['res']
