@@ -24,7 +24,7 @@ def url():
     if request.method == 'POST':   
         if "list" in request.values['res']: 
             n= request.values['res'].find("&list")            
-            url = "https://youtu.be/"+ request.values['res'][n-11:n+19]
+            url = "https://youtu.be/"+ request.values['res'][n-12:n-1] + "?" + request.values[n:n+18]
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html5lib')
             #找出a,包含href
