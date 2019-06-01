@@ -1,3 +1,3 @@
-web: gunicorn yourtube2:app --log-file -
+web: gunicorn yourtube:app --log-file -
 
 
