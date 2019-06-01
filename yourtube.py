@@ -4,6 +4,7 @@ import re
 from bs4 import BeautifulSoup
 import urllib
 from flask import Flask, request, render_template
+import html5lib
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST']) 
