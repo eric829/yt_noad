@@ -23,7 +23,7 @@ def url():
 #    try:
     if request.method == 'POST':   
         if "list" in request.values['res']: 
-            n= request.values['res'].find("&list")            
+            n= request.values['res'].find("list")            
             url = "https://youtu.be/"+ request.values['res'][n-12:n-1] + "?" + request.values['res'][n:n+18]
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html5lib')
