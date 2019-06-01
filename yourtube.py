@@ -3,6 +3,8 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from flask import Flask, request, render_template
+import urllib
+import html5lib
 
 app = Flask(__name__)
 
