@@ -1,18 +1,33 @@
 <html lang="en">
 <head>
     <title>Yourtube</title>
+    <style>
+        button{padding:10px 20px; background:rgb(0, 0, 0); border:0 none; color: #ffa704;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+        
+        input[type="text"]{padding:10px 80px; border:2px rgb(0, 0, 0) solid;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }        
+        
+    .demo{
+        padding-top: 50px;
+        text-align: center
+    }
+    </style>
 </head>
 <body>
     
-        <form name="urlget" align='center' method='post' target='my_frame' action='/'  ><font size='9' color='blue'>
-        <br>Youtube Url     <input type='text' name='res'size="40" /> <button onclick="send(1)" style="width:120px;height:40px;font-size:20px;">RUN</button> </br> 
-        
-        <font size='4' color='red'>Ex: https://youtu.be/zPYfT9azdK8  </font>
-        <br>
+        <form name="urlget" align='center' method='post' target='my_frame' action='/'  >
+        <br>    <font size='9' color='#0000D6'>Youtube Url   </font>
+        <input autofocus autocomplete="off" placeholder="請輸入Youtube影片網址" type='text' name='res' />              
+        <button onclick="send(1)" style=font-size:20px;">RUN</button> </br> 
         
         <p></p>
         
-        <div><font size='4' color='Gray'>Mix may take a while to create list</font></div>     
+           
     <iframe align='center' name="my_frame" width="1280" height="720" scrolling="no"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p></p>
 </form>
