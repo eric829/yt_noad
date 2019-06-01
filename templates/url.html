@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Yourtube</title>
+</head>
+<body>
+    
+        <form name="urlget" align='center' method='post' target='my_frame' action='/'  ><font size='9' color='blue'>
+        <br>Youtube Url     <input type='text' name='res'size="40" /> <button onclick="send(1)" style="width:120px;height:40px;font-size:20px;">單曲</button> <button onclick="send(2)" style="width:120px;height:40px;font-size:20px;">合輯</button> </br> 
+        
+        <font size='4' color='red'>Ex: https://youtu.be/zPYfT9azdK8  </font>
+        <br>
+        
+        <p></p>
+        </form>
+        <div><font size='4' color='Gray'>Mix may take a while to create list</font></div>     
+    <iframe align='center' name="my_frame" width="1680" height="720" scrolling="no"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    
+</body>
+</html>
+<script>
+    function send(type) {
+        var url = '';
+        if(type === 1){
+            url = '/';
+        }else{
+            url = '/list';
+        }
+        document.urlget.action = url;
+        document.urlget.submit();
+    }
+    </script>
+
+
+

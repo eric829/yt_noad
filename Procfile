@@ -1,0 +1,1 @@
+web: gunicorn yourtube2.wsgi --log-file -
