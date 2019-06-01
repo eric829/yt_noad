@@ -36,7 +36,7 @@ def url():
             #拼裝成短網址查找音源檔
                     url_emb ="https://www.youtube.com/get_video_info?html5=1&video_id="+s[9:20]
                     res3 = requests.get(url_emb, params=params)
-                    a = urllib.unquote(urllib.unquote(res3.text))
+                    a = urllib.parse.unquote(urllib.parse.unquote(res3.text))
                     if "---sn-" in a :
                         playlist.append(s[9:20])
                 #移除重複項
