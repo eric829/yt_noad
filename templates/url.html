@@ -2,39 +2,60 @@
 <head>
     <title>Yourtube</title>
     <style>
-        button{padding:10px 20px; background:rgb(0, 0, 0); border:0 none; color: #ffa704;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }
-        
-        input[type="text"]{padding:10px 80px; border:2px rgb(0, 0, 0) solid;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }        
-        
-    .demo{
-        padding-top: 50px;
-        text-align: center
-    }
+        button {
+        background: #2980b9;
+        background-image: -webkit-linear-gradient(top, #2980b9, #000000);
+        background-image: -moz-linear-gradient(top, #2980b9, #000000);
+        background-image: -ms-linear-gradient(top, #2980b9, #000000);
+        background-image: -o-linear-gradient(top, #2980b9, #000000);
+        background-image: linear-gradient(to bottom, #2980b9, #000000);
+        -webkit-border-radius: 60;
+        -moz-border-radius: 60;
+        border-radius: 60px;
+        font-family: Georgia;
+        color: #ffb700;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        }
+    
+  
+        input[type="text"]{padding:10px 80px; border:2px rgb(0, 0, 0) hidden;
+        cursor:pointer;
+        -webkit-border-radius: 15px;
+        border-radius: 15px; 
+        background-color:#EDEDED;
+        }        
+            
+        .demo{
+            padding-top: 50px;
+            text-align: center
+        }
     </style>
 </head>
 <body>
-    
+        <div  style="text-align:center;height:100px;">
         <form name="urlget" align='center' method='post' target='my_frame' action='/'  >
-        <br>    <font size='9' color='#0000D6'>Youtube Url   </font>
+        <br>    <font size='9' color='#0000D6'>Yourtube </font>
         <input autofocus autocomplete="off" placeholder="請輸入Youtube影片網址" type='text' name='res' />              
-        <button onclick="send(1)" style=font-size:20px;">RUN</button> </br> 
-        
+        <button onclick="send(1)" >Click me</button> </br> 
+        </form>        
+        </div>
         <p></p>
         
-           
-    <iframe align='center' name="my_frame" width="1280" height="720" scrolling="no"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p></p>
-</form>
+        <div style="text-align:center;background-color:#FAFAFA"> 
+            <iframe align='center' name="my_frame" width="1280" height="720"scrolling="no"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+             
+        </div>    
+    <p></p>
+
 <p></p>
 <p></p>
 </body>
 </html>
+
+
 <script>
     function send(type) {
         var url = '';
