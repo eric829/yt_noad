@@ -4,4 +4,4 @@ Flask==1.0.3
 gunicorn==19.9.0
 urllib3==1.22
 requests==2.18.4
-html5lib==0.9999999
+html5lib==0.99999999
